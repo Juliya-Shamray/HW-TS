@@ -1,5 +1,6 @@
-import { PostList } from "./components/PostList";
-
+import { PostList } from "./components";
+import { useDataPosts } from "./hooks";
 export const HomeFeature = () => {
-  return <PostList />;
+  const { posts } = useDataPosts();
+  return <PostList posts={posts} />;
 };

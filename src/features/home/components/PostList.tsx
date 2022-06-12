@@ -1,21 +1,26 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
-import { useDataPosts } from "../hooks";
 import { PostItem } from "./PostItem";
+import { PostInterface } from "../interfaces";
 
-export const PostList = () => {
-  const { posts } = useDataPosts();
+interface Props {
+  posts: PostInterface[];
+}
+
+export const PostList = ({ posts }: Props) => {
   return (
     <div
       css={css`
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        background-color: #ddd;
+        margin-bottom: 100px;
       `}
     >
       {posts.map((post) => (
-        <PostItem key={post.id} data={post} />
+        <PostItem key={post.id} post={post} />
       ))}
     </div>
   );

@@ -6,6 +6,7 @@ export const PageFeature = ({ children }: any) => (
     css={css`
       max-width: 1100px;
       margin: auto;
+      font-family: Arial, sans-serif;
     `}
   >
     {children}

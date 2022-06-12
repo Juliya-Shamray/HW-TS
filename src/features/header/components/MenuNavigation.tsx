@@ -10,9 +10,6 @@ export const MenuNavigation = () => (
       display: flex;
       justify-content: flex-end;
       gap: 30px;
-      :hover:first-child {
-        color: red;
-      }
     `}
   >
     {dataMenu.map((item) => (

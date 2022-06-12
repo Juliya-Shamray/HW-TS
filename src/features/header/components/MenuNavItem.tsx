@@ -6,7 +6,7 @@ interface Props {
   item: { id: number; name: string; url: string };
 }
 
-export const MenuNavItem = ({ item: { id, name, url } }: Props) => (
+export const MenuNavItem = ({ item: { name, url } }: Props) => (
   <li>
     <Link
       css={css`
@@ -15,7 +15,7 @@ export const MenuNavItem = ({ item: { id, name, url } }: Props) => (
         font-weight: bold;
         text-transform: uppercase;
         :hover {
-          color: red;
+          text-decoration: underline;
         }
       `}
       to={url}

@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 
-interface PostInterface {
-  id: number;
-  title: string;
-}
+import { PostInterface } from "../interfaces";
 
 export const useDataPosts = () => {
-  const [posts, setPosts] = useState([] as ReadonlyArray<PostInterface>);
+  const [posts, setPosts] = useState([] as PostInterface[]);
 
   useEffect(() => {
     fetch("https://dummyjson.com/posts?limit=10")
