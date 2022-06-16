@@ -4,3 +4,9 @@ export interface PostInterface {
   reactions: number;
   userId: number;
 }
+
+export interface PaginationInterface {
+  limit: number;
+  total: number;
+  page: number;
+}

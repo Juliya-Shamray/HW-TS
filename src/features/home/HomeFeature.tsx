@@ -1,6 +1,20 @@
-import { PostList } from "./components";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+import { PostList, PostSkeleton } from "./components";
+import { Pagination } from "./components/Pagination";
 import { useDataPosts } from "./hooks";
+
 export const HomeFeature = () => {
-  const { posts } = useDataPosts();
-  return <PostList posts={posts} />;
+  const { posts, isLoading, pagination, onChangePagination } = useDataPosts();
+
+  return (
+    <div
+      css={css`
+        margin-bottom: 100px;
+      `}
+    >
+      {isLoading ? <PostSkeleton /> : <PostList posts={posts} />}
+      <Pagination onChange={onChangePagination} pagination={pagination} />
+    </div>
+  );
 };

@@ -16,7 +16,7 @@ export const PostList = ({ posts }: Props) => {
         flex-wrap: wrap;
         justify-content: space-around;
         background-color: #ddd;
-        margin-bottom: 100px;
+        margin-bottom: 20px;
       `}
     >
       {posts.map((post) => (
