@@ -3,6 +3,7 @@ export interface PostInterface {
   title: string;
   reactions: number;
   userId: number;
+  body: string;
 }
 
 export interface PaginationInterface {
